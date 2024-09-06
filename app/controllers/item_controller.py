@@ -9,7 +9,7 @@ import uuid
 class ItemController:
     def __init__(self):
         self.blueprint = Blueprint('items', __name__)
-        self.collection_name = 'profiles'  # Replace with your actual collection name
+        self.collection_name = 'links'  # Replace with your actual collection name
         self.collection_ref = firestore.client().collection(self.collection_name)
 
         # Define routes
