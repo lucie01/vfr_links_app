@@ -32,7 +32,7 @@ name: 'Deploy to Cloud Run from Source'
 on:
   push:
     branches:
-      - '"main"'
+      - 'main'
 
 env:
   PROJECT_ID: '${{ env.PROJECT_ID }}' # TODO: update to your Google Cloud project ID
@@ -65,7 +65,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
       - name: 'Docker Auth'
         run: |-
-          gcloud auth configure-docker "${{ env.GAR_LOCATION }}-docker.pkg.dev"
+          gcloud auth configure-docker '${{ env.GAR_LOCATION }}-docker.pkg.dev'
 
       - name: 'Deploy to Cloud Run'
         uses: 'google-github-actions/deploy-cloudrun@33553064113a37d688aa6937bacbdc481580be17' # google-github-actions/deploy-cloudrun@v2
