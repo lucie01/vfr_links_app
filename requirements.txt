@@ -1,0 +1,21 @@
+# Flask-related dependencies
+Flask==2.3.2
+
+# Firebase Admin SDK for Python
+firebase-admin==6.2.0
+
+# Pydantic for data modeling and validation
+pydantic==2.3.0
+
+# Additional dependencies for handling JSON Web Tokens (JWT) if needed
+# PyJWT==2.8.0
+
+# Optionally, add a dependency for handling environment variables if you use .env files
+# python-dotenv==1.0.0
+
+# Gunicorn for production deployment
+gunicorn==21.2.0
+
+# Additional dependencies based on your specific needs
+# requests==2.31.0
+# sqlalchemy==2.0.23 (if you are planning to use SQLAlchemy in the future)
