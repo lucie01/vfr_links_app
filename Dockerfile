@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Set environment variables
-ENV FIREBASE_CERTIFICATE=${FIREBASE_CERTIFICATE}
+ENV FIREBASE_CERTIFICATE='${FIREBASE_CERTIFICATE}'
 
 # Copy the current directory contents into the container at /app
 COPY . /app
