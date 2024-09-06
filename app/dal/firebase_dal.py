@@ -2,6 +2,7 @@ from firebase_admin import credentials, firestore, initialize_app
 
 class FirebaseDAL:
     def __init__(self):
+        print('Some test for the firebase')
         self.db = self.init_firebase()
 
     def init_firebase(self):
