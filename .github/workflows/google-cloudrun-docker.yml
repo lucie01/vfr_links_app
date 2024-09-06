@@ -34,11 +34,11 @@ on:
     branches: ['main']
 
 env:
-  PROJECT_ID: '${{ env.PROJECT_ID }}' # TODO: update to your Google Cloud project ID
-  GAR_NAME: '${{ env.GAR_NAME }}'
-  GAR_LOCATION: '${{ env.GAR_LOCATION }}'
-  REGION: '${{ env.REGION }}' # TODO: update to your region
-  SERVICE: '${{ env.SERVICE_NAME }}' # TODO: update to your service name
+  PROJECT_ID: '${{ vars.PROJECT_ID }}' # TODO: update to your Google Cloud project ID
+  GAR_NAME: '${{ vars.GAR_NAME }}'
+  GAR_LOCATION: '${{ vars.GAR_LOCATION }}'
+  REGION: '${{ vars.REGION }}' # TODO: update to your region
+  SERVICE: '${{ vars.SERVICE_NAME }}' # TODO: update to your service name
 
 jobs:
   deploy:
