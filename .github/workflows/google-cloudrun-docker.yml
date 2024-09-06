@@ -69,7 +69,7 @@ jobs:
       - name: 'Build and Push Container'
         run: |-
           docker build -t '${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_LOCATION }}/${{ env.SERVICE }}:${{ github.sha }}' ./
-          docker PUSH '${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_LOCATION }}/${{ env.SERVICE }}:${{ github.sha }}'
+          docker push '${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_LOCATION }}/${{ env.SERVICE }}:${{ github.sha }}'
       
       # Deploy to cloud
       - name: 'Deploy to Cloud Run'
