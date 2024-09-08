@@ -35,20 +35,6 @@ def init_firebase():
         else:
             logger.info("Firebase is already initialized.")
 
-        # Return the Firestore client
-        mydb = firestore.client()
-
-        data = {
-            'task': 'Run firestore',
-            'status': 'ON_GOING'
-        }
-
-        doc_ref = mydb.collection('tasks').document()
-        doc_ref.set(data)
-
-        print('Document ID', doc_ref.id)
-
-
     except Exception as e:
         logger.error(f"Error initializing Firebase: {e}")
         raise
