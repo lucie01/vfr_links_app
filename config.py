@@ -17,6 +17,7 @@ def init_firebase():
 
     # Get the Firebase certificate path from the environment variable
     firebase_certificate = os.getenv('FIREBASE_CERTIFICATE')
+    firebase_certificate_dict = json.loads(firebase_certificate)
     
     # Print the value to check if it is being fetched correctly (for debugging)
     print('FIREBASE_CERTIFICATE:', firebase_certificate)
@@ -30,7 +31,7 @@ def init_firebase():
         # Check if Firebase is already initialized to avoid duplicate initialization
         if not firebase_admin._apps:
             # Load credentials from the JSON dictionary
-            cred = credentials.Certificate(firebase_certificate)
+            cred = credentials.Certificate(firebase_certificate_dict)
             # Initialize the Firebase app
             firebase_admin.initialize_app(cred)
             logger.info("Firebase initialized successfully.")
