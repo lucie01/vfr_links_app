@@ -1,7 +1,6 @@
 import os
 import json
 import logging
-from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials, firestore
 
@@ -9,8 +8,6 @@ from firebase_admin import credentials, firestore
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Load environment variables from .env file
-load_dotenv()
 
 # Firebase Initialization
 def init_firebase():
