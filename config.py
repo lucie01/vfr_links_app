@@ -1,6 +1,11 @@
 import os
+import logging
 from firebase_admin import credentials, firestore, initialize_app
 import firebase_admin
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Firebase Initialization
 def init_firebase():
@@ -9,6 +14,7 @@ def init_firebase():
     
     # Print the value to check if it is being fetched correctly (for debugging)
     print('FIREBASE_CERTIFICATE:', firebase_certificate)
+    logger.info("FIREBASE_CERTIFICATE", firebase_certificate)
 
     # Check if the environment variable is set
     if not firebase_certificate:
