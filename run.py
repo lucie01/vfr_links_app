@@ -1,5 +1,7 @@
 from flask import Flask
 from app.controllers.item_controller import ItemController
+from config import init_firebase
+
 
 app = Flask(__name__)
 
