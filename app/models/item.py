@@ -19,4 +19,4 @@ class Profile(BaseModel):
     socials: List[Social]
 
     class Config:
-        orm_mode = True
+        from_attributes = True
