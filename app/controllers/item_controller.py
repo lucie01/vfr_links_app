@@ -5,10 +5,12 @@ from firebase_admin import firestore
 from pydantic import ValidationError
 from app.models.item import Profile
 import uuid
+from flask_cors import CORS  # Import CORS
 
 class ItemController:
     def __init__(self):
         self.blueprint = Blueprint('items', __name__)
+        CORS(self.blueprint, resources={r"/items/*": {"origins": "https://vfr-links-995250867468.europe-west1.run.app/"}})  # Allow only specific origin
         self.collection_name = 'links'  # Replace with your actual collection name
         self.collection_ref = firestore.client().collection(self.collection_name)
 
