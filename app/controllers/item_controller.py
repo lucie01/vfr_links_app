@@ -52,7 +52,7 @@ class ItemController:
         try:
             doc = self.collection_ref.document(id).get()
             if doc.exists:
-                return jsonify(doc), 200
+                return jsonify(doc.to_dict()), 200
             else:
                 return jsonify({"error": "Item not found"}), 404
         except Exception as e:
